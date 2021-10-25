@@ -7,7 +7,7 @@ class Cadastrar extends CI_Controller {
 	{
 		parent::__construct();
 		permissao();
-		$this->load->model('imoveis_model');
+		$this->load->model('Imoveis_model');
 	}
 
 	public function index()
@@ -35,8 +35,8 @@ class Cadastrar extends CI_Controller {
 		$imagem = $this->upload->data()['file_name'];
 		
 		$imovel  = $_POST;
-		$this->load->model('imoveis_model');
-		$this->imoveis_model->guardar($imovel, $imagem);
+		$this->load->model('Imoveis_model');
+		$this->Imoveis_model->guardar($imovel, $imagem);
 		redirect('listar');
 	}
 

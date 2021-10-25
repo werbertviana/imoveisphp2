@@ -59,14 +59,14 @@ class Imoveis extends CI_Controller {
 		
 
 		$imovel  = $_POST;
-		$this->imoveis_model->atualizar($id, $imovel, $imagem);
+		$this->Imoveis_model->atualizar($id, $imovel, $imagem);
 		redirect('listar');
 	}
 
 	public function deletar($id)
 	{
 	
-		$this->imoveis_model->deletar($id);
+		$this->Imoveis_model->deletar($id);
 		redirect('listar');
 	}
 }
