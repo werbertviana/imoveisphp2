@@ -4,11 +4,7 @@
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 			<h1 class="h2">Imóveis</h1>
 	</div>
-	<div>
-		<form action="" method="post">
-			<input class="form-control form-control-dark" type="text" name="busca" id="busca" placeholder="Pesquisar" aria-label="Search" value="">
-		</form>
-	</div>
+	
 	<div class="table-responsive">
 		<table class="table table-bordered table-hover">
 			<thead>

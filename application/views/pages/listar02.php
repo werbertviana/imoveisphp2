@@ -1,53 +1,52 @@
-
+<script src="https://kit.fontawesome.com/2a33fe9a00.js" crossorigin="anonymous"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Imóveis</h1>
 </div>
-<div>
-    <form action="" method="post">
-        <input class="form-control form-control-dark" type="text" name="busca" id="busca" placeholder="Pesquisar" aria-label="Search" value="">
-    </form>
-</div>
-<div class="table-responsive">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Tipo do imóvel</th>
-                <th>Dormitórios</th>
-                <th>Banheiros</th>
-                <th>Suítes</th>
-                <th>Endereço</th>
-                <th>Preço</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
 
-        <tbody>
-            <?php foreach($list as $d) : ?>
-                <tr>
-                    <td> <?= $d['id'] ?> </td>
-                    <td> <?= $d['tipo_propriedade'] ?> </td>
-                    <td> <?= $d['dormitorios'] ?> </td>
-                    <td> <?= $d['banheiros'] ?> </td>
-                    <td> <?= $d['suites'] ?> </td>
-                    <td> <?= $d['endereco'] ?> </td>
-                    <td> <?= $d['preco'] ?> </td>
-                    <td>
-                        <a href="<?= base_url() ?>listar/editar/<?=$d['id'] ?>" class = "btn btn-sm btn-warning">
-                            <i class = 'fas fa-pencil-alt'></i>
-                        </a>
-                        <a href="javascript:goDelete(<?=$d['id'] ?>)" class = "btn btn-sm btn-danger">
-                            <i class = 'fas fa-trash-alt'></i>
-                        </a>
-                    </td>
-                </tr>
-            <?php endforeach ?>
-        </tbody>
+<div class = "resultados">
+	
+	<?php foreach($list as $d) : ?>
+        <div class = "containerimage">
+            <div class = "imagem">
+                <img src="<?= base_url("assets/images/" . $d['imagem']) ?>" />
+            </div>   
+            
+            <div class= "imovel">
+                    
+                <div class = "linha01">
+            
+                    <span class="title">
+                    <?= $d['tipo_propriedade'] ?>
+                    </span>	
+                    <a href="<?= base_url() ?>listar/editar/<?=$d['id'] ?>" class = "btn btn-sm btn-warning icon ">
+                        <i class="fas fa-pencil-alt"></i>
+                    </a>
 
-    </table>
+                    <a href="javascript:goDelete(<?=$d['id'] ?>)" class = "btn btn-sm btn-danger icon">
+                        <i class="fas fa-trash-alt"></i>
+                    </a>  
+                </div>
+
+                <div class = "linha02">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>
+                        <?= $d['endereco'] ?>
+                    </span>	
+                </div>	
+
+                <div class = "linha03">
+                    <span>
+                        <span class="money">R$</span> <?= $d['preco'] ?>
+                    </span>	
+                </div>	
+            </div> 
+        </div>       		
+	<?php endforeach ?>
+
 </div>
+
 </main>
 
 <script>
@@ -57,7 +56,59 @@ function goDelete(id) {
         window.location.href = myurl;
     } else {
         alert("Registro não alterado!");
-        return false;
     }
 }
 </script>
+
+<style>
+        .resultados{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .imovel{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+            
+        }
+        .linha01{
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+            font-size: 25px;
+        }
+        .linha02{
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+        }
+        .linha03{
+            font-size: 50px;
+        }
+        .money{
+            font-size: 30px;
+            color: green;
+        }
+        .icon{
+            display: flex;
+            flex-direction: row;
+            margin: 5px;  
+        }
+        .title{
+            color: green; 
+            margin: 5px;
+        }
+        .imagem img{
+            margin: 5px;
+            width: auto;
+            height: 200px;
+        }
+        .containerimage{
+            display:flex;
+            flex-direction: row;
+            margin: 5px;
+        }
+</style>

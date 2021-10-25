@@ -20,7 +20,7 @@ class Listar extends CI_Controller {
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);
-		$this->load->view('pages/listar', $data);
+		$this->load->view('pages/listar02', $data);
 		$this->load->view('templates/footer', $data);
 		$this->load->view('templates/js', $data);
 	}
@@ -61,14 +61,14 @@ class Listar extends CI_Controller {
 		$imagem = $this->upload->data()['file_name'];
 
 		$imovel  = $_POST;
-		$this->imoveis_model->atualizar($id, $imovel, $imagem);
+		$this->Imoveis_model->atualizar($id, $imovel, $imagem);
 		redirect('listar');
 	}
 
 	public function deletar($id)
 	{
 	
-		$this->imoveis_model->deletar($id);
+		$this->Imoveis_model->deletar($id);
 		redirect('listar');
 	}
 }
