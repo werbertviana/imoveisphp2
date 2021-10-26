@@ -34,18 +34,21 @@
         <ul class="nav flex-column">
 					<li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>home">
+            <i class="fas fa-home fa-fw"></i>
               <span data-feather="file"></span>
               Home
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>listar">
+            <i class="fas fa-clipboard-list fa-fw"></i>
               <span data-feather="file"></span>
               Listar
             </a>
           </li>
 					<li class="nav-item">
             <a class="nav-link" href="<?= base_url() ?>cadastrar">
+            <i class="fas fa-plus-square fa-fw"></i>
               <span data-feather="file"></span>
               Cadastrar
             </a>

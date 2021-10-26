@@ -38,7 +38,7 @@ class Listar extends CI_Controller {
 
 		$data['edit'] = $this->Imoveis_model->editar($id);
 		$data['title'] = 'Editar - Elleven';
-		
+		$data['user'] = $this->session->userdata()['logado']['nome'];
 
         $this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);
