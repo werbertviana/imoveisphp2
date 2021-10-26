@@ -20,17 +20,17 @@
                     <span class="title">
                     <?= $d['tipo_propriedade'] ?>
                     </span>	
-                    <a href="<?= base_url() ?>listar/editar/<?=$d['id'] ?>" class = "btn btn-sm btn-warning icon ">
-                        <i class="fas fa-pencil-alt"></i>
+                    <a href="<?= base_url() ?>listar/editar/<?=$d['id'] ?>" class = "btn btn-sm btn-warning" style="margin-right: 6px">
+                        <i class="fas fa-pencil-alt fa-fw" ></i>
                     </a>
 
-                    <a href="javascript:goDelete(<?=$d['id'] ?>)" class = "btn btn-sm btn-danger icon">
-                        <i class="fas fa-trash-alt"></i>
+                    <a href="javascript:goDelete(<?=$d['id'] ?>)" class = "btn btn-sm btn-danger" >
+                        <i class="fas fa-trash-alt fa-fw"></i>
                     </a>  
                 </div>
 
                 <div class = "linha02">
-                    <i class="fas fa-map-marker-alt" style="margin-right: 4px"></i>
+                    <i class="fas fa-map-marker-alt " style="margin-right: 4px; color: black"></i>
                     <span>
                         <?= $d['endereco'] ?>
                     </span>	
@@ -52,7 +52,7 @@
                 </div>	
 
                 <div class = "linha04">
-                    <i class="fas fa-tag" style="margin-right: 4px"></i>
+                    <i class="fas fa-tag" style="margin-right: 6px;color: gray"></i>
                     <span>
                         <span>R$</span> <?= $d['preco'] ?>
                     </span>	
@@ -103,6 +103,7 @@ function goDelete(id) {
             align-items: center; 
             width: 100%;
             font-size: 15px;
+           
         }
         .linha03{
             display: flex;
@@ -111,13 +112,13 @@ function goDelete(id) {
             width: 100%;
             font-size: 12px;
             margin: 2px;
+            
         }
         .linha04{
             display:flex;
-            font-size: 40px;
+            font-size: 35px;
             width: 100%;
             align-items: center;
-            
         }
         .icon{
             display: flex;
