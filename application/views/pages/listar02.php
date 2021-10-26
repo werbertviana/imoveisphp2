@@ -1,7 +1,7 @@
 <script src="https://kit.fontawesome.com/2a33fe9a00.js" crossorigin="anonymous"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<div style="margin-top: 40px" class="border-bottom">
         <h1 class="h2">Imóveis</h1>
 </div>
 
@@ -62,6 +62,7 @@ function goDelete(id) {
 
 <style>
         .resultados{
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -79,6 +80,7 @@ function goDelete(id) {
             flex-direction: row;
             align-items: center; 
             font-size: 25px;
+            max-width: 200px;
         }
         .linha02{
             display: flex;
@@ -103,8 +105,8 @@ function goDelete(id) {
         }
         .imagem img{
             margin: 5px;
-            width: auto;
-            height: 200px;
+            width: 300px;
+            height: auto;
         }
         .containerimage{
             display:flex;

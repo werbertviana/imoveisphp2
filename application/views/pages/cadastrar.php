@@ -1,13 +1,13 @@
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Cadastro de Imóveis</h1>
-    </div>
+	<div style="margin-top: 40px" class="border-bottom">
+			<h1 class="h2">Cadastro de Imóveis</h1>
+	</div>
 
 	<div class="col-md-12">
 
 		<form enctype="multipart/form-data" action="<?= base_url()?>cadastrar/guardar" method="post">
 
-			<div class="col-md-6">
+			<div class="col-md-6" style="margin-top: 40px">
 				<div class="form-group">
 					<label for="imovel">Tipo do imóvel</label>
 					<select class ="form-select" aria-label="Default select example" name="tipo_propriedade" id= "imovel" required>
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 
-			<div class="col-md-6">
+			<div class="col-md-6" style="margin-bottom:20px">
 				<button type="submit" class="btn btn-success btn-xs"><i class="fas fa-check"></i> Salvar</button>
 				<a href="<?= base_url()?>listar" class="btn btn-danger btn-xs"><i class="fas fa-times"></i> Cancelar</a>			
 			</div>
