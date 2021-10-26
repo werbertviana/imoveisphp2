@@ -21,7 +21,7 @@ class Listar extends CI_Controller {
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);
-		$this->load->view('pages/listar02', $data);
+		$this->load->view('pages/listar', $data);
 		$this->load->view('templates/footer', $data);
 		$this->load->view('templates/js', $data);
 	}
