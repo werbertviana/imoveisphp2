@@ -17,6 +17,7 @@ class Listar extends CI_Controller {
 		
 		$data['list'] = $this->Imoveis_model->listar();
 		$data['title'] = 'Listar - Elleven';
+		$data['user'] = $this->session->userdata()['logado']['nome'];
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);

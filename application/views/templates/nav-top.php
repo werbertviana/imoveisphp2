@@ -5,12 +5,19 @@
       <img src="<?= base_url("assets/images/logo.png") ?>" class="img-fluid"></img>
     </div>
   </a>
-  
-  <div class="navbar-nav px-3">
+
+
+<div style="display:flex; flex-direction: flex-end;">
+  <div class="navbar-nav px-3 container">
+      <div class="avatar">
+        <img src="<?= base_url("assets/images/avatar.png") ?>" class="img-fluid"></img>
+      </div>
+      <span class="user"><?= $user ?></span>
       <a class="nav-link" href="<?= base_url() ?>login/logout">
         <i class="fas fa-sign-out-alt img-fluid" style="font-size: 2rem"></i>
       </a> 
   </div>
+</div>
 
 </nav>
 
@@ -54,4 +61,24 @@
     padding: 25px;
     align-items: center;
     }
+
+  .avatar {
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+  .container {
+   display: flex;
+   flex-direction: row;
+  }
+
+  .user {
+    margin-right: 20px;
+    color: #FFF;
+  }
 </style>

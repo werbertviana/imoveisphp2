@@ -8,7 +8,7 @@ class Home extends CI_Controller {
 		$data['title'] = 'Home - Elleven';
 		
 		$data['user'] = $this->session->userdata()['logado']['nome'];
-		// var_dump($data['user']);
+		
 		
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);

@@ -1,6 +1,7 @@
 <script src="https://kit.fontawesome.com/2a33fe9a00.js" crossorigin="anonymous"></script>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
+
 <div style="margin-top: 40px" class="border-bottom">
         <h1 class="h2">Imóveis</h1>
 </div>

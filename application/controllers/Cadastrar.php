@@ -13,6 +13,7 @@ class Cadastrar extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Cadastrar - Elleven';
+		$data['user'] = $this->session->userdata()['logado']['nome'];
 
         $this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);
