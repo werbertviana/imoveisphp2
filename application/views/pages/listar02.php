@@ -9,15 +9,14 @@
 <div class = "resultados">
 	
 	<?php foreach($list as $d) : ?>
-        <div class = "containerimage">
+        <div class = "containerimoveis">
             <div class = "imagem">
                 <img src="<?= base_url("assets/images/" . $d['imagem']) ?>" />
             </div>   
             
-            <div class= "imovel">
+            <div class= "imoveldados">
                     
                 <div class = "linha01">
-            
                     <span class="title">
                     <?= $d['tipo_propriedade'] ?>
                     </span>	
@@ -31,7 +30,7 @@
                 </div>
 
                 <div class = "linha02">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt" style="margin-right: 4px"></i>
                     <span>
                         <?= $d['endereco'] ?>
                     </span>	
@@ -39,7 +38,23 @@
 
                 <div class = "linha03">
                     <span>
-                        <span class="money">R$</span> <?= $d['preco'] ?>
+                        <?= $d['dormitorios'] ?>
+                        QUARTO(S) |
+                    </span>	
+                    <span>
+                        <?= $d['banheiros'] ?>
+                        BANHEIRO(S) |
+                    </span>	
+                    <span>
+                        <?= $d['suites'] ?>
+                        SUÍTE(S)
+                    </span>	
+                </div>	
+
+                <div class = "linha04">
+                    <i class="fas fa-tag" style="margin-right: 4px"></i>
+                    <span>
+                        <span>R$</span> <?= $d['preco'] ?>
                     </span>	
                 </div>	
             </div> 
@@ -66,34 +81,43 @@ function goDelete(id) {
             margin-top: 10px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            
+            align-items: center;   
         }
-        .imovel{
+        .imoveldados{
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 5px;
-            
+            justify-content:center;
+            margin: 10px;
         }
         .linha01{
             display: flex;
             flex-direction: row;
             align-items: center; 
             font-size: 25px;
-            max-width: 200px;
+            width: 100%;
         }
         .linha02{
             display: flex;
             flex-direction: row;
             align-items: center; 
+            width: 100%;
+            font-size: 15px;
         }
         .linha03{
-            font-size: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+            width: 100%;
+            font-size: 12px;
+            margin: 2px;
         }
-        .money{
-            font-size: 30px;
-            color: green;
+        .linha04{
+            display:flex;
+            font-size: 40px;
+            width: 100%;
+            align-items: center;
+            
         }
         .icon{
             display: flex;
@@ -102,14 +126,14 @@ function goDelete(id) {
         }
         .title{
             color: green; 
-            margin: 5px;
+            margin-right: 5px;
         }
         .imagem img{
             margin: 5px;
             width: 300px;
             height: auto;
         }
-        .containerimage{
+        .containerimoveis{
             display:flex;
             flex-direction: row;
             margin: 5px;

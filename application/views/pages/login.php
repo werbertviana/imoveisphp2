@@ -37,7 +37,9 @@
   </head>
   <body class="text-center">
     <form class="form-signin" method="post" action="<?= base_url() ?>login/guardar">
+
   <img class="mb-4" src="https://getbootstrap.com/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  
   <h1 class="h3 mb-3 font-weight-normal">Login</h1>
   <label for="inputEmail" class="sr-only">Email</label>
   <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
